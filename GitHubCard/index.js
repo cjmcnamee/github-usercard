@@ -54,7 +54,7 @@ const followersArray = [];
 */
 
 function gitHubUser(Obj){
-
+  // define new elements
   const divCard = document.createElement('div');
   const imgUrl = document.createElement('img');
   const divCardInfo = document.createElement('div');
@@ -66,7 +66,16 @@ function gitHubUser(Obj){
   const pFollowing = document.createElement('p');
   const pBio = document.createElement('p');
 
-  
+  // setup structure of elements
+  divCard.appendChild(imgUrl)
+  divCard.appendChild(divCardInfo)
+  divCardInfo.appendChild(username)
+  divCardInfo.appendChild(pLocation)
+  divCardInfo.appendChild(pProfile)
+  pProfileInfo.appendChild(link)
+  divCardInfo.appendChild(pFollowers)
+  divCardInfo.appendChild(pFollowing)
+  divCardInfo.appendChild(pBio)
 }
 
 /* List of LS Instructors Github username's:
