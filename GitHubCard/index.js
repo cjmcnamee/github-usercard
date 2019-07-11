@@ -4,7 +4,6 @@
 */
 axios.get('https://api.github.com/users/cjmcnamee')
   .then(response => {
-    console.log(response.data);
     gitHubUser(response.data);
   })
   .catch(err => {
@@ -13,7 +12,6 @@ axios.get('https://api.github.com/users/cjmcnamee')
 
 axios.get('https://api.github.com/users/tetondan')
   .then(response => {
-    console.log(response.data);
     gitHubUser(response.data);
   })
   .catch(err => {
@@ -22,7 +20,6 @@ axios.get('https://api.github.com/users/tetondan')
 
 axios.get('https://api.github.com/users/dustinmyers')
   .then(response => {
-    console.log(response.data);
     gitHubUser(response.data);
   })
   .catch(err => {
@@ -31,21 +28,21 @@ axios.get('https://api.github.com/users/dustinmyers')
 
 axios.get('https://api.github.com/users/justsml')
   .then(response => {
-    console.log(response.data);
     gitHubUser(response.data);
   })
   .catch(err => {
     console.log(err);
   });
 
-axios.get('https://api.github.com/users/luishrd')
+axios.get('https://api.github.com/users/bigknell')
   .then(response => {
-    console.log(response.data);
     gitHubUser(response.data);
   })
   .catch(err => {
     console.log(err);
   });
+
+
 
 /* Step 2: Inspect and study the data coming back, this is YOUR
    github info! You will need to understand the structure of this
@@ -99,7 +96,6 @@ function gitHubUser(Obj) {
   const pUsername = document.createElement('p');
   const pLocation = document.createElement('p');
   const pProfile = document.createElement('p');
-  const aLink = document.createElement('a');
   const pFollowers = document.createElement('p');
   const pFollowing = document.createElement('p');
   const pBio = document.createElement('p');
@@ -111,7 +107,6 @@ function gitHubUser(Obj) {
   divCardInfo.appendChild(pUsername);
   divCardInfo.appendChild(pLocation);
   divCardInfo.appendChild(pProfile);
-  pProfile.appendChild(aLink);
   divCardInfo.appendChild(pFollowers);
   divCardInfo.appendChild(pFollowing);
   divCardInfo.appendChild(pBio);
@@ -127,14 +122,14 @@ function gitHubUser(Obj) {
   h3Name.innerHTML = Obj.name;
   pUsername.innerHTML = Obj.login;
   pLocation.innerHTML = `Location: ${Obj.location}`;
-  pProfile.innerHTML = "Profile: ";
-  aLink.href = Obj.html_url;
-  aLink.innerHTML = Obj.html_url;
+  pProfile.innerHTML = `Profile: ${Obj.url}`;
   pFollowers.innerHTML = `Followers: ${Obj.followers_url}`;
   pFollowing.innerHTML = `Following: ${Obj.following_url}`;
   pBio.innerHTML = `Bio: ${Obj.bio}`;
 
   console.log(divCard)
+  let cards = document.querySelector('.cards');
+  cards.appendChild(divCard);
 }
 
 
