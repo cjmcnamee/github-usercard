@@ -53,6 +53,22 @@ const followersArray = [];
 
 */
 
+function gitHubUser(Obj){
+
+  const divCard = document.createElement('div');
+  const imgUrl = document.createElement('img');
+  const divCardInfo = document.createElement('div');
+  const username = document.createElement('h3');
+  const pLocation = document.createElement('p');
+  const pProfile = document.createElement('p');
+  const link = document.createElement('a');
+  const pFollowers = document.createElement('p');
+  const pFollowing = document.createElement('p');
+  const pBio = document.createElement('p');
+
+  
+}
+
 /* List of LS Instructors Github username's:
   tetondan
   dustinmyers
