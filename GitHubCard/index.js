@@ -76,6 +76,11 @@ function gitHubUser(Obj){
   divCardInfo.appendChild(pFollowers)
   divCardInfo.appendChild(pFollowing)
   divCardInfo.appendChild(pBio)
+
+  // set class names
+  divCard.classList.add('card')
+  divCardInfo.classList.add('card-info')
+  username.classList.add('username')
 }
 
 /* List of LS Instructors Github username's:
